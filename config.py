@@ -57,7 +57,11 @@ def validate_coordinates(
     height: int
 ) -> tuple[int, int]:
     try:
-        x, y = map(int, config[key].split(","))
+        x, y = config[key].split(",")
+
+        x = int(x)
+        y = int(y)
+        #x, y = map(int, config[key].split(","))
     except ValueError:
         raise ValueError(f"{key} must be x,y")
 
