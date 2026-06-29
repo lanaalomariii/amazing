@@ -72,3 +72,6 @@ def validate_perfect(config: dict) -> bool:
     if value not in ["True", "False"]:
         raise ValueError("PERFECT must be True or False")
     rwturn
+
+
+
